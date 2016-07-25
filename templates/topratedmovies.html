@@ -1,0 +1,16 @@
+     <div class="jumbotron">
+      <div class="container">
+        <h2> {{section}} </h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 sizeBox" ng-repeat="rated in toprateds | filter : movies">
+            <div class="thumbnail">
+              <img ng-src="http://image.tmdb.org/t/p/w500{{rated.poster_path}}" id="size">
+              <div class="caption">
+                <h5>{{rated.original_title}}</h5>
+                <p>From: {{rated.release_date}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

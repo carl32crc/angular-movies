@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMovieApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Routes angular demo</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ng-class="{ 'active' : $root.section === 'Popular Movies' }"><a href="#/popularmovies">Popular  Movies</a></li>
+            <li ng-class="{ 'active' : $root.section === 'Upcoming Movies' }"><a href="#/upcomingmovies">Upcoming Movies</a></li>
+            <li ng-class="{ 'active' : $root.section === 'Now Playing Movies' }"><a href="#/nowplayingmovies">Now Playing Movies</a></li>
+            <li ng-class="{ 'active' : $root.section === 'Top Rated Movies' }"><a href="#/topratedmovies">Top Rated Movies</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container">
+		<p id="filtermovie"><input type="text" ng-model="movies"></p>
+		<div ng-view></div>
+	</div>
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js'></script>
+
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/routing.js"></script>
+	<script src="services/index.js"></script>
+	<script src="services/movieService.js"></script>
+	
+
+</body>
+</html>

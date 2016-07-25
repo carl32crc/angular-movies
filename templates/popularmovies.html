@@ -1,0 +1,17 @@
+    
+    <div class="jumbotron">
+      <div class="container">
+        <h2> {{section}} </h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4" ng-repeat="poster in posters | filter : movies">
+            <div class="thumbnail">
+              <img ng-src="http://image.tmdb.org/t/p/w500{{poster.poster_path}}" id="size">
+              <div class="caption">
+                <h5>{{poster.original_title}}</h5>
+                <p>From: {{poster.release_date}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

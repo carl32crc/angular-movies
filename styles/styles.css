@@ -1,0 +1,14 @@
+#size{
+	width: 300px;
+	height: 400px;
+}
+
+.sizeBox{
+	width: 310px;
+	height: 528px;
+}
+
+#filtermovie{
+	margin-top: 80px;
+	text-align: center;
+}
